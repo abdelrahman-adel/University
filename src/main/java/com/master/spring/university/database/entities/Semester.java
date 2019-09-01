@@ -11,7 +11,7 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries(value = {
-		@NamedQuery(name = "findByAttributes", query = "select s from Semester s where s.id=:id and s.value=:value") })
+		@NamedQuery(name = "Semester.findByAttributes", query = "select s from Semester s where s.id=:id and s.value=:value") })
 public class Semester {
 
 	@Id

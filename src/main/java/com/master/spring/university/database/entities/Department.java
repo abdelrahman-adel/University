@@ -5,14 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
 @NamedQueries(value = {
-		@NamedQuery(name = "findByAttributes", query = "select d from Department d where d.id=:id and d.name=:name") })
+		@NamedQuery(name = "Department.findByAttributes", query = "select d from Department d where d.id=:id and d.name=:name") })
 public class Department {
 
 	@Id
@@ -23,12 +24,12 @@ public class Department {
 	@Column(name = "NAME", nullable = false)
 	private String name;
 
-	@OneToMany(fetch = FetchType.EAGER)
-	@Column(name = "COLLEGE_ID", nullable = false)
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "COLLEGE_ID", nullable = false)
 	private College college;
 
 	@OneToOne(fetch = FetchType.EAGER)
-	@Column(name = "PROFESSOR_ID", nullable = false)
+	@JoinColumn(name = "PROFESSOR_ID", nullable = false)
 	private Professor professor;
 
 }

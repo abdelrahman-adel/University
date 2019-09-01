@@ -11,7 +11,7 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries(value = {
-		@NamedQuery(name = "findByAttributes", query = "select s from Student s where s.id=:id and s.name=:name and s.mobile=:mobile and s.address=:address and s.joiningDate=:joiningDate") })
+		@NamedQuery(name = "Student.findByAttributes", query = "select s from Student s where s.id=:id and s.name=:name and s.mobile=:mobile and s.address=:address and s.joiningDate=:joiningDate") })
 public class Student {
 
 	@Id
@@ -30,6 +30,17 @@ public class Student {
 
 	@Column(name = "JOINING_DATE", nullable = false)
 	private Date joiningDate;
+
+	public Student() {
+	}
+
+	public Student(String name, String mobile, String address, Date joiningDate) {
+		super();
+		this.name = name;
+		this.mobile = mobile;
+		this.address = address;
+		this.joiningDate = joiningDate;
+	}
 
 	public long getId() {
 		return id;
@@ -69,5 +80,11 @@ public class Student {
 
 	public void setJoiningDate(Date joiningDate) {
 		this.joiningDate = joiningDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", mobile=" + mobile + ", address=" + address + ", joiningDate="
+				+ joiningDate + "]";
 	}
 }

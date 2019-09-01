@@ -9,7 +9,7 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries(value = {
-		@NamedQuery(name = "findByAttributes", query = "select c from Course c where c.id=:id and c.name=:name and creditHours=:creditHours") })
+		@NamedQuery(name = "Course.findByAttributes", query = "select c from Course c where c.id=:id and c.name=:name and creditHours=:creditHours") })
 public class Course {
 
 	@Id
