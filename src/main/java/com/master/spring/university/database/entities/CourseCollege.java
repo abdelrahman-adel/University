@@ -6,8 +6,12 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQueries(value = {
+		@NamedQuery(name = "findByAttributes", query = "select cc from CourseCollege cc where cc.id=:id") })
 public class CourseCollege {
 
 	@Id

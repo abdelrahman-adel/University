@@ -5,9 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 @Entity
+@NamedQueries(value = {
+		@NamedQuery(name = "findByAttributes", query = "select s from Specialty s where s.id=:id and s.name=:name") })
 public class Specialty {
 
 	@Id

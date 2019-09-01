@@ -6,8 +6,12 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQueries(value = {
+		@NamedQuery(name = "findByAttributes", query = "select s from Semester s where s.id=:id and s.value=:value") })
 public class Semester {
 
 	@Id

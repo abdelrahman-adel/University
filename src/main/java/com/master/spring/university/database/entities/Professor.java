@@ -4,8 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQueries(value = {
+		@NamedQuery(name = "findByAttributes", query = "select p from Professor p where p.id=:id and p.name=:name and mobile=:mobile and address=:address") })
 public class Professor {
 
 	@Id
