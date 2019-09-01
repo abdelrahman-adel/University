@@ -1,0 +1,69 @@
+package com.master.spring.university.database.entities;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Student {
+
+	@Id
+	@GeneratedValue
+	@Column(name = "ID", nullable = false)
+	private long id;
+
+	@Column(name = "NAME", nullable = false)
+	private String name;
+
+	@Column(name = "MOBILE", nullable = false)
+	private String mobile;
+
+	@Column(name = "ADDRESS", nullable = false)
+	private String address;
+
+	@Column(name = "JOINING_DATE", nullable = false)
+	private Date joiningDate;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public Date getJoiningDate() {
+		return joiningDate;
+	}
+
+	public void setJoiningDate(Date joiningDate) {
+		this.joiningDate = joiningDate;
+	}
+}
