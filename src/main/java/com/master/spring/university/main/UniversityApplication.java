@@ -36,6 +36,12 @@ public class UniversityApplication implements CommandLineRunner {
 		for (Student student : students) {
 			logger.info("StudentRepository.findAll(): {}", student);
 		}
+
+		students = studentRepository.findAll();
+		for (Student student : students) {
+			logger.info("StudentRepository.findAll(): {}", student);
+		}
+
 		studentRepository.findByAttributes(new Parameters());
 	}
 
