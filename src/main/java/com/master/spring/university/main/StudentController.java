@@ -5,37 +5,42 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.master.spring.university.database.entities.Student;
 import com.master.spring.university.database.repositories.StudentRepository;
 import com.master.spring.university.database.utils.Parameters;
 
-@RestController()
+@RestController
 public class StudentController {
 
 	@Autowired
 	StudentRepository studentRepository;
 
+	private static final String URL_PREFIX = "/Student";
+
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@RequestMapping("/getAllStudents")
-	public List<Student> getAllStudents() {
+	@RequestMapping(URL_PREFIX + "/getAllStudents")
+	public Student getAllStudents() {
 		logger.info("{}.getAllStudents", this.getClass().getName());
-		return studentRepository.findAll();
+		return studentRepository.findAll().get(0);
 	}
 
-	@RequestMapping("/getStudent")
-	public Student getStudent(@RequestParam Student student) {
+	@RequestMapping(URL_PREFIX + "/getStudent")
+	public List<Student> getStudent(@RequestBody Student student) {
+		if (null == student) {
+			return null;
+		}
 		Parameters parameters = new Parameters();
 		parameters.addParameter("id", student.getId());
 		parameters.addParameter("name", student.getName());
 		parameters.addParameter("address", student.getAddress());
 		parameters.addParameter("mobile", student.getMobile());
 		parameters.addParameter("joiningDate", student.getJoiningDate());
-		studentRepository.findByAttributes(parameters);
-		return null;
+		List<Student> students = studentRepository.findByAttributes(parameters);
+		return students;
 	}
 }
