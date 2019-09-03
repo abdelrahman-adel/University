@@ -32,17 +32,12 @@ public class UniversityApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Student> students = studentRepository.findAll();
-		for (Student student : students) {
-			logger.info("StudentRepository.findAll(): {}", student);
-		}
-
-		students = studentRepository.findAll();
-		for (Student student : students) {
-			logger.info("StudentRepository.findAll(): {}", student);
-		}
-
-		studentRepository.findByAttributes(new Parameters());
+//		List<Student> students = studentRepository.findAll();
+//		for (Student student : students) {
+//			logger.info("StudentRepository.findAll(): {}", student);
+//		}
+//
+//		studentRepository.findByAttributes(new Parameters());
 	}
 
 }
