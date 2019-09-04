@@ -24,9 +24,9 @@ public class StudentController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@RequestMapping(URL_PREFIX + "/getAllStudents")
-	public Student getAllStudents() {
+	public List<Student> getAllStudents() {
 		logger.info("{}.getAllStudents", this.getClass().getName());
-		return studentRepository.findAll().get(0);
+		return studentRepository.findAll();
 	}
 
 	@RequestMapping(URL_PREFIX + "/getStudent")
