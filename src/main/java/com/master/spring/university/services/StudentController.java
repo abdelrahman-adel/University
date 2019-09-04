@@ -1,4 +1,4 @@
-package com.master.spring.university.main;
+package com.master.spring.university.services;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import com.master.spring.university.database.entities.Student;
 import com.master.spring.university.database.repositories.StudentRepository;
 import com.master.spring.university.database.utils.Parameters;
 
-@RestController
+@RestController("CourseController")
 public class StudentController {
 
 	@Autowired
@@ -40,7 +40,9 @@ public class StudentController {
 		parameters.addParameter("address", student.getAddress());
 		parameters.addParameter("mobile", student.getMobile());
 		parameters.addParameter("joiningDate", student.getJoiningDate());
-		logger.info("Parameters:\n {}", parameters.getParametersMap());
+		
+		logger.info("Parameters: {}", parameters.getParametersMap());
+		
 		List<Student> students = studentRepository.findByAttributes(parameters);
 		return students;
 	}

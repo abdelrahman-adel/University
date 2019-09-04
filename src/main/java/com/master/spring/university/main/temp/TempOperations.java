@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.master.spring.university.database.entities.Course;
 import com.master.spring.university.database.entities.Student;
 
 public class TempOperations {
@@ -17,5 +18,12 @@ public class TempOperations {
 		students.add(new Student("Fatma Ibrahim", "01248622800", "Earth", new Date()));
 		students.add(new Student("Mohamed Lotfi", "01066399922", "Mohandsen", new Date()));
 		return students;
+	}
+
+	public static List<Course> getCourses() {
+		List<Course> courses = new ArrayList<>();
+		courses.add(new Course("Data Structures", 3));
+		courses.add(new Course("OOP", 3));
+		return courses;
 	}
 }
