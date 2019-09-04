@@ -29,7 +29,7 @@ public class StudentController {
 		return studentRepository.findAll();
 	}
 
-	@RequestMapping(URL_PREFIX + "/getStudent")
+	@RequestMapping( URL_PREFIX + "/getStudent")
 	public List<Student> getStudent(@RequestBody Student student) {
 		if (null == student) {
 			return null;
@@ -40,6 +40,7 @@ public class StudentController {
 		parameters.addParameter("address", student.getAddress());
 		parameters.addParameter("mobile", student.getMobile());
 		parameters.addParameter("joiningDate", student.getJoiningDate());
+		logger.info("Parameters:\n {}", parameters.getParametersMap());
 		List<Student> students = studentRepository.findByAttributes(parameters);
 		return students;
 	}
