@@ -20,6 +20,7 @@ import com.master.spring.university.database.repositories.SemesterRepository;
 import com.master.spring.university.database.repositories.SpecialtyRepository;
 import com.master.spring.university.database.repositories.StudentRepository;
 import com.master.spring.university.database.utils.ExtendedRepositoryImpl;
+import com.master.spring.university.main.temp.TempOperations;
 
 @EntityScan(basePackages = "com.master.spring.university.database.entities")
 @EnableJpaRepositories(repositoryBaseClass = ExtendedRepositoryImpl.class, basePackages = "com.master.spring.university.database.repositories")
@@ -55,6 +56,9 @@ public class UniversityApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		new TempOperations(studentRepository, courseRepository, professorRepository, academicYearRepository,
+				semesterRepository, plannedCourseRepository, collegeRepository, specialtyRepository,
+				courseProfessorRepository, departmentRepository).initializeDataBase();
 	}
 
 }
