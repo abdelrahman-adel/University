@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0b120edb-435a-47c2-a165-b92098d128c3" activeEnvironment="Default" name="University" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings/>
+	<con:interface xsi:type="con:RestService" id="da10e59b-90d7-424a-a07c-a8a16c091be5" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache/>
+		<con:endpoints>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+		</con:endpoints>
+		<con:resource name="getAllCourses" path="/Course/getCourse" id="5ce515bb-4d6c-448e-be9f-bef41f7165dd">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="5d62cfe3-cfe8-454b-88f3-6b720e144833" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:request name="getAllCourses" id="fa438943-8764-41db-b563-b2ea5c4c50c8" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/Course/getAllCourses</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+					<con:parameterOrder/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getCourse" path="/Course/getCourse" id="1fb20aa2-6af7-4e62-bf3d-da65e11a40bb">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="01fedeb3-c7bd-4885-8d77-5aedf95e1771" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>400</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Course/getCourse">get:Fault</con:element>
+				</con:representation>
+				<con:request name="getCourse" id="9c845b35-6678-4ce2-9b96-7938650f22ab" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+   "name":"OOP"
+}</con:request>
+					<con:originalUri>http://localhost/Course/getCourse</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAllPlannedCourses" path="/PlannedCourse/getAllPlannedCourses" id="e12be423-5da7-4785-b6e6-04c542492c90">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="1af90931-e3c4-4bc8-aa39-2c2c97a7d0c7" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="GetAllPlannedCourses" id="9ca6dafd-2221-4404-b2bb-59a053509afe" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/PlannedCourse/getAllPlannedCourses</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getPlannedCourse" path="/PlannedCourse/getPlannedCourse" id="dbaa6a3d-6a62-4be3-821e-4ad0bcc599aa">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="2649407e-d438-4847-bf5d-d6aec177563e" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>404 500</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Course/getPlannedCourse">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getPlannedCourse" id="fff3d913-4114-4f7c-8cac-f097dd772077" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+	"id": "1"
+}</con:request>
+					<con:originalUri>http://localhost/Course/getPlannedCourse</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAllProfessors" path="/Professor/getAllProfessors" id="09041664-42ef-4317-bd8a-17fea0e06737">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="260527d2-7ebc-4bb7-9873-3d528baab8b8" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/hal+json;charset=UTF-8</con:mediaType>
+					<con:status>404</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Professor/getProfessors">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAllProfessors" id="bcc32278-96a5-43aa-99b9-9567773a4109" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/Professor/getProfessors</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getProfessor" path="/Professor/getProfessor" id="0b4c6c0d-4158-4d56-bbde-b1cff65423f3">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="dc342cf3-0fee-42cd-a2f2-64ecaf63a5fd" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>400</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Professor/getProfessor">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:request name="getProfessor" id="e37c0386-078a-40c5-b4cb-fbf0d7d3940e" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+	"id": "1"
+}</con:request>
+					<con:originalUri>http://localhost/Professor/getProfessor</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+					<con:parameterOrder/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAllSpecialties" path="/Specialty/getAllSpecialties" id="19041664-42ef-4317-bd8a-17fea0e06737">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="360527d2-7ebc-4bb7-9873-3d528baab8b8" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/hal+json;charset=UTF-8</con:mediaType>
+					<con:status>404</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Specialty/getAllSpecialties">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAllSpecialties" id="1cc32278-96a5-43aa-99b9-9567773a4109" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/Specialty/getAllSpecialties</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getSpecialty" path="/Specialty/getSpecialty" id="1b4c6c0d-4158-4d56-bbde-b1cff65423f3">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="1c342cf3-0fee-42cd-a2f2-64ecaf63a5fd" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>400</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Specialty/getSpecialty">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:request name="getSpecialty" id="137c0386-078a-40c5-b4cb-fbf0d7d3940e" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+	"id": "1"
+}</con:request>
+					<con:originalUri>http://localhost/Specialty/getSpecialty</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+					<con:parameterOrder/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAllSemesters" path="/Semester/getAllSemesters" id="19141664-42ef-4317-bd8a-17fea0e06737">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="361527d2-7ebc-4bb7-9873-3d528baab8b8" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/hal+json;charset=UTF-8</con:mediaType>
+					<con:status>404</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Semester/getAllSemesters">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAllSemesters" id="1c132278-96a5-43aa-99b9-9567773a4109" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/Semester/getAllSemesters</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getSemester" path="/Semester/getSemester" id="1b1c6c0d-4158-4d56-bbde-b1cff65423f3">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="1c142cf3-0fee-42cd-a2f2-64ecaf63a5fd" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>400</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Semester/getSemester">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:request name="getSemester" id="131c0386-078a-40c5-b4cb-fbf0d7d3940e" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+	"id": "1"
+}</con:request>
+					<con:originalUri>http://localhost/Semester/getSemester</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+					<con:parameterOrder/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAllDepartments" path="/Department/getAllDepartments" id="19142664-42ef-4317-bd8a-17fea0e06737">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="361527d2-7ebc-4bb7-9873-3d528baab8b8" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/hal+json;charset=UTF-8</con:mediaType>
+					<con:status>404</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Department/getAllDepartments">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAllDepartments" id="1c132278-96a5-43aa-97b9-9567773a4109" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/Department/getAllDepartments</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getDepartment" path="/Department/getDepartment" id="1b1c6c0x-4158-4d56-bbde-b1cff65423f3">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="1c142cf3-0fee-42cd-a2f2-64ecaz63a5fd" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>400</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/Department/getDepartment">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:request name="getDepartment" id="131c0386-078a-40c5-b4cb-mbf0d7d3940e" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+	"id": "1"
+}</con:request>
+					<con:originalUri>http://localhost/Department/getDepartment</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+					<con:parameterOrder/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAllCourseProfessors" path="/CourseProfessor/getAllCourseProfessors" id="e9f2e40b-74fc-4c5a-8515-4fe5190aed68">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="26576fb4-607a-4242-8dbf-531f91ce018f" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAllCourseProfessors" id="d2d1b638-7e53-4b32-8d1d-3add1c0444a4" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/CourseProfessor/getAllCourseProfessors</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getCourseProfessor" path="/CourseProfessor/getCourseProfessor" id="db6ce9fa-22ce-4468-bf6e-289ad60850d3">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="83d8187d-c756-442a-8966-90558048fb69" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>500</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/CourseProfessor/getCourseProfessor">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getCourseProfessor" id="2b5b0834-eb75-4c95-8797-32b2d5398312" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+	"id": "1"
+}</con:request>
+					<con:originalUri>http://localhost/CourseProfessor/getCourseProfessor</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAllAcademicYears" path="/AcademicYear/getAllAcademicYears" id="e2f2e40b-74fc-4c5a-8515-4fe5190aed68">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="26576fb4-607z-4242-8dbf-531f91ce018f" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAllAcademicYears" id="d2d1g638-7e53-4b32-8d1d-3add1c0444a4" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/AcademicYear/getAllAcademicYears</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAcademicYear" path="/AcademicYear/getAcademicYear" id="db6ce9fa-22ce-4468-bf6e-289ad60850d3">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="83d8187d-c756-442a-8z66-90558048fb69" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>500</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/AcademicYear/getAcademicYear">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAcademicYear" id="2b5b0l34-eb75-4c95-8797-32b2d5398312" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+	"id": "1"
+}</con:request>
+					<con:originalUri>http://localhost/AcademicYear/getAcademicYear</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getAllColleges" path="/College/getAllColleges" id="e2f2e40b-74fc-4c5a-85m5-4fe5190aed68">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="26576fb4-607z-4242-8dbf-531f91ceX18f" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getAllColleges" id="d2d1g638-7e53-4b32-8dtd-3add1c0444a4" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://localhost/College/getAllColleges</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="getCollege" path="/College/getCollege" id="db6cp9fa-22ce-4468-bf6e-289ad60850d3">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" id="83d8187d-c756-442a-8z66-905v8048fb69" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>500 400</con:status>
+					<con:params/>
+					<con:element xmlns:get="http://localhost/College/getCollege">get:Fault</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params/>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="getCollege" id="2b5b0l34-eb75-4c95-8797-32bxd5398312" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request>{
+	"id": "1",
+	"deputy": {
+		"id": 1
+	}
+}</con:request>
+					<con:originalUri>http://localhost/College/getCollege</con:originalUri>
+					<con:credentials>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+	<con:resource name="getAllStudents" path="/Student/getAllStudents" id="9c50b584-bcbb-47ea-ae1e-19e57455aee7"><con:settings/><con:parameters/><con:method name="Method 1" id="2388e38c-5785-443c-a58a-6ff0a1f7e103" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="getAllStudents" id="2933f233-52b7-4279-9bd2-8d7ad2072706" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/Student/getAllStudents</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="getStudent" path="/Student/getStudent" id="9bc9f6bb-aede-4da5-85ee-cd4e11a54b3d"><con:settings/><con:parameters/><con:method name="Method 1" id="989180d1-37b5-425f-9f47-efb236cdb5f6" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="getStudent" id="3d280dd9-49c2-488b-9cff-2f011bbb96fb" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+  "name": "Abd-Elrahman Adel"
+}</con:request><con:originalUri>http://localhost/Student/getStudent</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface>
+	<con:properties/>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+	<con:oAuth1ProfileContainer/>
+</con:soapui-project>
