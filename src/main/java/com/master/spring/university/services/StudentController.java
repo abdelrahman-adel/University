@@ -13,24 +13,24 @@ import com.master.spring.university.database.entities.Student;
 import com.master.spring.university.database.repositories.StudentRepository;
 import com.master.spring.university.database.utils.Parameters;
 
-@RestController("CourseController")
+@RestController
+@RequestMapping("/Student")
 public class StudentController {
 
 	@Autowired
 	StudentRepository studentRepository;
 
-	private static final String URL_PREFIX = "/Student";
-
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@RequestMapping(URL_PREFIX + "/getAllStudents")
+	@RequestMapping("/getAllStudents")
 	public List<Student> getAllStudents() {
 		logger.info("{}.getAllStudents", this.getClass().getName());
 		return studentRepository.findAll();
 	}
 
-	@RequestMapping( URL_PREFIX + "/getStudent")
+	@RequestMapping("/getStudent")
 	public List<Student> getStudent(@RequestBody Student student) {
+		logger.info("{}.getStudent", this.getClass().getName());
 		if (null == student) {
 			return null;
 		}
@@ -40,9 +40,9 @@ public class StudentController {
 		parameters.addParameter("address", student.getAddress());
 		parameters.addParameter("mobile", student.getMobile());
 		parameters.addParameter("joiningDate", student.getJoiningDate());
-		
+
 		logger.info("Parameters: {}", parameters.getParametersMap());
-		
+
 		List<Student> students = studentRepository.findByAttributes(parameters);
 		return students;
 	}

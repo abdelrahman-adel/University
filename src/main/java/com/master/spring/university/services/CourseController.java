@@ -13,23 +13,22 @@ import com.master.spring.university.database.entities.Course;
 import com.master.spring.university.database.repositories.CourseRepository;
 import com.master.spring.university.database.utils.Parameters;
 
-@RestController("CourseController")
+@RestController
+@RequestMapping("/Course")
 public class CourseController {
 
 	@Autowired
 	CourseRepository courseRepository;
 
-	private static final String URL_PREFIX = "/Course";
-
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@RequestMapping(URL_PREFIX + "/getAllCourses")
+	@RequestMapping("/getAllCourses")
 	public List<Course> getAllCourses() {
 		logger.info("{}.getAllCourses", this.getClass().getName());
 		return courseRepository.findAll();
 	}
 
-	@RequestMapping(URL_PREFIX + "/getCourse")
+	@RequestMapping("/getCourse")
 	public List<Course> getCourse(@RequestBody Course course) {
 		logger.info("{}.getCourse", this.getClass().getName());
 		if (null == course) {

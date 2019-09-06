@@ -1,7 +1,5 @@
 package com.master.spring.university.main;
 
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.master.spring.university.database.entities.Student;
 import com.master.spring.university.database.repositories.AcademicYearRepository;
+import com.master.spring.university.database.repositories.CollegeRepository;
 import com.master.spring.university.database.repositories.CourseProfessorRepository;
 import com.master.spring.university.database.repositories.CourseRepository;
 import com.master.spring.university.database.repositories.DepartmentRepository;
@@ -22,7 +20,6 @@ import com.master.spring.university.database.repositories.SemesterRepository;
 import com.master.spring.university.database.repositories.SpecialtyRepository;
 import com.master.spring.university.database.repositories.StudentRepository;
 import com.master.spring.university.database.utils.ExtendedRepositoryImpl;
-import com.master.spring.university.main.temp.TempOperations;
 
 @EntityScan(basePackages = "com.master.spring.university.database.entities")
 @EnableJpaRepositories(repositoryBaseClass = ExtendedRepositoryImpl.class, basePackages = "com.master.spring.university.database.repositories")
@@ -37,6 +34,8 @@ public class UniversityApplication implements CommandLineRunner {
 	ProfessorRepository professorRepository;
 	@Autowired
 	AcademicYearRepository academicYearRepository;
+	@Autowired
+	CollegeRepository collegeRepository;
 	@Autowired
 	SemesterRepository semesterRepository;
 	@Autowired
