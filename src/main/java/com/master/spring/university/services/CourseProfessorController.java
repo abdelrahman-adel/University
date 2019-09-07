@@ -36,8 +36,8 @@ public class CourseProfessorController {
 		}
 		Parameters parameters = new Parameters();
 		parameters.addParameter("id", courseProfessor.getId());
-//		parameters.addParameter("plannedCourse", courseProfessor.getPlannedCourse());
-//		parameters.addParameter("professor", courseProfessor.getProfessor());
+		parameters.addParameter("plannedCourse", courseProfessor.getPlannedCourse());
+		parameters.addParameter("professor", courseProfessor.getProfessor());
 
 		logger.info("Parameters: {}", parameters.getParametersMap());
 

@@ -37,7 +37,7 @@ public class SpecialtyController {
 		Parameters parameters = new Parameters();
 		parameters.addParameter("id", specialty.getId());
 		parameters.addParameter("name", specialty.getName());
-//		parameters.addParameter("creditHours", Specialty.getDepartment());
+		parameters.addParameter("department", specialty.getDepartment());
 
 		logger.info("Parameters: {}", parameters.getParametersMap());
 

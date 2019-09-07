@@ -36,10 +36,10 @@ public class PlannedCourseController {
 		}
 		Parameters parameters = new Parameters();
 		parameters.addParameter("id", plannedCourse.getId());
-//		parameters.addParameter("course", plannedCourse.getCourse());
-//		parameters.addParameter("college", plannedCourse.getCollege());
-//		parameters.addParameter("department", plannedCourse.getDepartment());
-//		parameters.addParameter("specialty", plannedCourse.getSpecialty());
+		parameters.addParameter("course", plannedCourse.getCourse());
+		parameters.addParameter("college", plannedCourse.getCollege());
+		parameters.addParameter("department", plannedCourse.getDepartment());
+		parameters.addParameter("specialty", plannedCourse.getSpecialty());
 
 		logger.info("Parameters: {}", parameters.getParametersMap());
 
