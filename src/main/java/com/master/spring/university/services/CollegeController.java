@@ -35,11 +35,11 @@ public class CollegeController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", college.getId());
-		parameters.addParameter("name", college.getName());
-		parameters.addParameter("deputy", college.getDeputy());
+		parameters.add("id", college.getId());
+		parameters.add("name", college.getName());
+		parameters.add("deputy", college.getDeputy());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<College> colleges = collegeRepository.findByAttributes(parameters);
 		return colleges;

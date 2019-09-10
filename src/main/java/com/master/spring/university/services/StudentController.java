@@ -35,13 +35,13 @@ public class StudentController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", student.getId());
-		parameters.addParameter("name", student.getName());
-		parameters.addParameter("address", student.getAddress());
-		parameters.addParameter("mobile", student.getMobile());
-		parameters.addParameter("joiningDate", student.getJoiningDate());
+		parameters.add("id", student.getId());
+		parameters.add("name", student.getName());
+		parameters.add("address", student.getAddress());
+		parameters.add("mobile", student.getMobile());
+		parameters.add("joiningDate", student.getJoiningDate());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<Student> students = studentRepository.findByAttributes(parameters);
 		return students;

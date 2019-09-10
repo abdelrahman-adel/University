@@ -35,11 +35,11 @@ public class CourseController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", course.getId());
-		parameters.addParameter("name", course.getName());
-		parameters.addParameter("creditHours", course.getCreditHours());
+		parameters.add("id", course.getId());
+		parameters.add("name", course.getName());
+		parameters.add("creditHours", course.getCreditHours());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<Course> courses = courseRepository.findByAttributes(parameters);
 		return courses;

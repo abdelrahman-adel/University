@@ -35,11 +35,11 @@ public class SpecialtyController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", specialty.getId());
-		parameters.addParameter("name", specialty.getName());
-		parameters.addParameter("department", specialty.getDepartment());
+		parameters.add("id", specialty.getId());
+		parameters.add("name", specialty.getName());
+		parameters.add("department", specialty.getDepartment());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<Specialty> Specialties = SpecialtyRepository.findByAttributes(parameters);
 		return Specialties;

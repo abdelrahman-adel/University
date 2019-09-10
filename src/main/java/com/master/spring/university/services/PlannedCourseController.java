@@ -35,13 +35,13 @@ public class PlannedCourseController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", plannedCourse.getId());
-		parameters.addParameter("course", plannedCourse.getCourse());
-		parameters.addParameter("college", plannedCourse.getCollege());
-		parameters.addParameter("department", plannedCourse.getDepartment());
-		parameters.addParameter("specialty", plannedCourse.getSpecialty());
+		parameters.add("id", plannedCourse.getId());
+		parameters.add("course", plannedCourse.getCourse());
+		parameters.add("college", plannedCourse.getCollege());
+		parameters.add("department", plannedCourse.getDepartment());
+		parameters.add("specialty", plannedCourse.getSpecialty());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<PlannedCourse> plannedCourses = plannedCourseRepository.findByAttributes(parameters);
 		return plannedCourses;

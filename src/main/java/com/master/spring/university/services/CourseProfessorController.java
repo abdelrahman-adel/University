@@ -35,11 +35,11 @@ public class CourseProfessorController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", courseProfessor.getId());
-		parameters.addParameter("plannedCourse", courseProfessor.getPlannedCourse());
-		parameters.addParameter("professor", courseProfessor.getProfessor());
+		parameters.add("id", courseProfessor.getId());
+		parameters.add("plannedCourse", courseProfessor.getPlannedCourse());
+		parameters.add("professor", courseProfessor.getProfessor());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<CourseProfessor> courseProfessors = courseProfessorRepository.findByAttributes(parameters);
 		return courseProfessors;

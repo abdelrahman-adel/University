@@ -35,10 +35,10 @@ public class SemesterController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", semester.getId());
-		parameters.addParameter("value", semester.getValue());
+		parameters.add("id", semester.getId());
+		parameters.add("value", semester.getValue());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<Semester> semesters = semesterRepository.findByAttributes(parameters);
 		return semesters;

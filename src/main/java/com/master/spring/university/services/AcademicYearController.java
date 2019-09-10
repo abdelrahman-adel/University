@@ -35,13 +35,13 @@ public class AcademicYearController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", academicYear.getId());
-		parameters.addParameter("student", academicYear.getStudent());
-		parameters.addParameter("plannedCourse", academicYear.getPlannedCourse());
-		parameters.addParameter("academicYear", academicYear.getAcademicYear());
-		parameters.addParameter("semester", academicYear.getSemester());
+		parameters.add("id", academicYear.getId());
+		parameters.add("student", academicYear.getStudent());
+		parameters.add("plannedCourse", academicYear.getPlannedCourse());
+		parameters.add("academicYear", academicYear.getAcademicYear());
+		parameters.add("semester", academicYear.getSemester());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<AcademicYear> academicYears = academicYearRepository.findByAttributes(parameters);
 		return academicYears;

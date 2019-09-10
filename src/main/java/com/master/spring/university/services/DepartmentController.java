@@ -35,12 +35,12 @@ public class DepartmentController {
 			return null;
 		}
 		Parameters parameters = new Parameters();
-		parameters.addParameter("id", department.getId());
-		parameters.addParameter("name", department.getName());
-		parameters.addParameter("college", department.getCollege());
-		parameters.addParameter("head", department.getHead());
+		parameters.add("id", department.getId());
+		parameters.add("name", department.getName());
+		parameters.add("college", department.getCollege());
+		parameters.add("head", department.getHead());
 
-		logger.info("Parameters: {}", parameters.getParametersMap());
+		logger.info("Parameters: {}", parameters.getAll());
 
 		List<Department> departments = departmentRepository.findByAttributes(parameters);
 		return departments;
